@@ -1,0 +1,121 @@
+Mini Project 1 : Student Course Enrollment System using Core Logic & Data 
+Structures 
+ 
+ 
+1. Project Title 
+Student Course Enrollment System using Core Logic and Data Structures 
+ 
+Problem Statement 
+To design and implement a system that manages student course enrollments using core programming logic and data structures. The system should allow adding students, enrolling them in courses, displaying records, and managing data efficiently without using GUI. 
+ 
+Objective 
+•	To implement core logic for enrollment system • To use data structures for efficient storage 
+•	To perform operations like add, search, display 
+•	To improve logical thinking and problem-solving skills 
+•	To understand real-world data handling 
+ 
+Tools Used 
+ 
+•	Java (JDK) 
+•	VS Code / Eclipse / IntelliJ IDEA 
+ 
+Description 
+ 
+This project implements a Student Course Enrollment System using Java core programming concepts. The system uses ArrayList (data structure) to store student records dynamically. Each student has a name and enrolled course. The system allows users to: 
+•	Add new students  
+•	Display all enrolled students  
+•	Search for a student  
+The program runs in a console-based environment and demonstrates efficient data handling          using collections. 
+. 
+Algorithm 
+ 
+•	Start the program 
+•	Create an empty ArrayList 
+•	Display menu options 
+•	User selects operation 
+•	If add → input student details and store 
+•	If display → show all students 
+•	If search → find student by name 
+•	Repeat until exit 
+•	End program 
+ 
+ 
+ 
+Program (Python Code) 
+   
+import java.util.ArrayList; 
+import java.util.Scanner; 
+ 
+class Student {     String name; 
+    String course; 
+ 
+    Student(String name, String course) {         this.name = name; 
+        this.course = course; 
+    } 
+ 
+    public String toString() { 
+        return name + " enrolled in " + course; 
+    } 
+} 
+ 
+public class Main { 
+ 
+    public static void main(String[] args) { 
+ 
+        ArrayList<Student> students = new ArrayList<>(); 
+        Scanner sc = new Scanner(System.in); 
+ 
+        while (true) { 
+            System.out.println("\n1. Add Student"); 
+            System.out.println("2. Display Students"); 
+            System.out.println("3. Search Student"); 
+            System.out.println("4. Exit"); 
+ 
+            System.out.print("Enter choice: ");             int choice = sc.nextInt(); 
+            sc.nextLine(); 
+ 
+            switch (choice) { 
+                 case 1: 
+                    System.out.print("Enter Name: "); 
+                    String name = sc.nextLine(); 
+ 
+                    System.out.print("Enter Course: "); 
+                    String course = sc.nextLine(); 
+ 
+                    students.add(new Student(name, course));                     System.out.println("Student Added!");                     break; 
+                 case 2: 
+                    System.out.println("\nEnrolled Students:"); 
+                    for (Student s : students) { 
+                        System.out.println(s); 
+                    }                     break; 
+                 case 3: 
+                    System.out.print("Enter name to search: ");                     String search = sc.nextLine(); 
+                    boolean found = false; 
+ 
+                    for (Student s : students) {                         if (s.name.equalsIgnoreCase(search)) {                             System.out.println("Found: " + s); 
+                            found = true; 
+                        } 
+                    } 
+ 
+                    if (!found) { 
+                        System.out.println("Student not found!"); 
+                    }                     break; 
+                 case 4: 
+                    System.out.println("Exiting..."); 
+                    return; 
+                 default: 
+                    System.out.println("Invalid choice!"); 
+            } 
+        } 
+    } 
+} 
+ 
+9.Result 
+ 
+The Student Course Enrollment System was successfully implemented using core Java logic and data structures. The system efficiently stores and retrieves student data using ArrayList. 
+ 
+ 
+ 
+ 10.Conclusion 
+  This project demonstrates a simple Restaurant Management System using Python. 
+It helps in understanding basic programming concepts like loops, conditional statements, and dictionaries. The system allows users to order food items and automatically calculates the total bill. 
